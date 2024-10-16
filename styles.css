@@ -1,0 +1,124 @@
+body {
+    background-color: #36194e;
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p, li {
+    color: #ffffff;
+}
+
+a {
+    color: #8d6fa7;
+}
+
+header {
+    background-color: #36194e;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+header span {
+    flex: 1;
+    text-align: center;
+    font-size: 48px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: calc(100% - 40px);
+    margin: 120px auto 20px;
+}
+
+.help, .events, .about, .contact {
+    background-color: #110c14;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%; 
+    height: auto;        
+    max-width: 500px;  
+    max-height: 500px;   
+    object-fit: cover;   
+    display: block;      
+    margin: 0 auto;     
+}
+
+/* Previous and Next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    user-select: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .help, .events, .about, .contact {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+}
